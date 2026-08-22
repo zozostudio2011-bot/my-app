@@ -1,0 +1,126 @@
+:root{
+  --bg:#0f1112;
+  --card:#1e2224;
+  --muted:#9aa0a6;
+  --border:rgba(255,255,255,0.04);
+  --accent-green:#14a56a;
+  --accent-blue:#1e6cff;
+  --card-radius:10px;
+  --gap:28px;
+  --text:#e7e9ea;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:Inter, Roboto, Arial, sans-serif;
+  background:linear-gradient(180deg, #0b0c0d 0%, #0f1112 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:36px;
+}
+
+.app{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  width:100%;
+}
+
+.wrap{
+  display:flex;
+  gap:var(--gap);
+  width:100%;
+  max-width:1100px;
+  align-items:flex-start;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--card-radius);
+  padding:28px;
+  border:1px solid var(--border);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3) inset;
+}
+
+.left-card{
+  width:420px;
+}
+.right-card{
+  flex:1;
+  min-width:320px;
+}
+
+.card-title{
+  margin:0 0 18px 0;
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+}
+
+.control-group{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:22px;
+}
+
+.label{
+  font-size:13px;
+  color:var(--muted);
+  text-align:center;
+}
+
+.text-input, .parser-textarea{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:12px 14px;
+  border-radius:6px;
+  color:var(--text);
+  outline:none;
+  transition:box-shadow .12s, border-color .12s;
+}
+.text-input::placeholder, .parser-textarea::placeholder{
+  color:rgba(255,255,255,0.28);
+}
+.text-input:focus, .parser-textarea:focus{
+  border-color:rgba(255,255,255,0.12);
+  box-shadow:0 0 0 4px rgba(30,108,255,0.04);
+}
+
+.btn{
+  padding:12px 16px;
+  border-radius:8px;
+  border:none;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:6px;
+}
+.btn-green{ background:var(--accent-green); }
+.btn-blue{ background:var(--accent-blue); }
+
+.parser-textarea{
+  width:100%;
+  min-height:160px;
+  resize:vertical;
+}
+
+.file-row{
+  margin-top:18px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Responsiveness */
+@media (max-width:880px){
+  .wrap{ flex-direction:column; align-items:center; }
+  .left-card{ width:100%; max-width:650px; }
+  .right-card{ width:100%; max-width:650px; }
+  body{ padding:18px; }
+}

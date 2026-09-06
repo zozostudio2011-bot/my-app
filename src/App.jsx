@@ -123,6 +123,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 // Import parser file for side effects only — DO NOT MODIFY rgmParser.js
+import RGMBatchDownloader from './components/RGMBatchDownloader'
 import "./rgmParser";
 
 export default function App() {
@@ -419,7 +420,9 @@ export default function App() {
               {loading.dds ? "Downloading..." : "Download DDS"}
             </button>
           </div>
+          <RGMBatchDownloader />
         </div>
+
 
         {/* RIGHT */}
         <div className="column right-card card">

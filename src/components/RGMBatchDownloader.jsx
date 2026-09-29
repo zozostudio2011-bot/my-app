@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function RGMBatchDownloader() {
+export default function RGMBatchDownloader( {paste} ) {
   const [inputList, setInputList] = useState("");
   const [items, setItems] = useState([]); // [{ id, name, rgmUrl, ddsUrl, loading }]
   const [downloadLoading, setDownloadLoading] = useState({});
@@ -51,6 +51,8 @@ export default function RGMBatchDownloader() {
       setDownloadLoading((s) => ({ ...s, [key]: false }));
     }
   }
+
+  
 
   return (
     <div style={{ padding: "16px", background: "rgba(0,0,0,0.2)", borderRadius: "8px" }}>

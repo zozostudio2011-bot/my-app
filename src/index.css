@@ -33,7 +33,7 @@ body{
   display:flex;
   gap:var(--gap);
   width:100%;
-  max-width:1100px;
+  max-width:1260px;
   align-items:flex-start;
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 .left-card{
-  width:420px;
+  width:520px;
 }
 .right-card{
   flex:1;
